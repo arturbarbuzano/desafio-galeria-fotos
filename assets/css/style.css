@@ -1,0 +1,78 @@
+@import url('reset.css');
+
+* {
+    font-family: Roboto;
+}
+
+body {
+    background: linear-gradient(rgb(187, 187, 187),rgb(209, 209, 209),rgb(255, 255, 255), rgb(209, 209, 209), rgb(187, 187, 187));
+    background-attachment: fixed;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 260px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-radius: 20px;
+}
+
+.photo p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#message {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .search-container input {
+    width: 180px;
+  } 
+}
